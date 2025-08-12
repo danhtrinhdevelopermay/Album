@@ -1,0 +1,59 @@
+You are an expert in Android programming, UI design and CI/CD. Create a complete Android project that runs on Replit (using Gradle), with the following requirements:
+
+1. Application goals:
+- Photo and video library application, simulating the most similar iOS 18 Photos application.
+- Support viewing photos, videos, albums, searching, sorting by day/month/year.
+- Smooth photo zoom (pinch-to-zoom, double-tap zoom).
+- Grid and timeline view.
+- View photo/video details, play videos with control bar.
+
+2. Interface:
+- iOS 18 style: soft rounded corners, iOS style icons, San Francisco font.
+- Bottom navigation bar (tab bar): Photos, Albums, Search, For You.
+- Gaussian Blur effect for navigation bar, title bar, popup menu.
+- Dark Mode & Light Mode.
+- Smooth transition animation like iOS.
+
+3. Features:
+- Load photos/videos from memory (MediaStore API).
+- Search by file name, album, or date.
+
+- Recently Deleted, Favorites.
+
+- Create new album, add/delete photos.
+
+- Delete, share, edit photos (crop, rotate, adjust brightness).
+
+- View Live Photo or GIF.
+
+- Optimize performance to load multiple photos (Glide or Coil).
+
+4. Technical:
+
+- Language: Kotlin.
+
+- Use Android Jetpack (ViewModel, LiveData, Navigation).
+
+- UI XML layout.
+
+- Gaussian Blur: RenderScript or similar library.
+
+Compatible with Android 8.0+.
+
+- All code, Gradle, project structure must be built directly on Replit.
+
+5. CI/CD GitHub Actions:
+- Create a `.github/workflows/build-apk.yml` file with the following processes:
+a. Analyze code (lint, ktlint).
+b. Test code (JUnit).
+c. Build APK release.
+d. Sign APK release with keystore (keytool, secrets in GitHub Actions).
+e. Upload APK artifact after build.
+- Automatically run when pushing to `main` branch or creating pull request.
+
+6. Additional requirements:
+- README.md guide to build & run on Replit.
+
+- Clear code, with comments.
+- Provide sample keystore file (dummy) and guide to create real keystore.
+- Interface and features are as similar to iOS 18 Photos as possible.

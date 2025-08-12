@@ -1,0 +1,34 @@
+modules = ["nodejs-20", "python-3.11", "java-17"]
+[agent]
+expertMode = true
+
+[nix]
+channel = "stable-25_05"
+packages = ["android-tools", "gradle"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Demo iOS 18 Photos"
+
+[[workflows.workflow]]
+name = "Demo iOS 18 Photos"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./demo_build.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[ports]]
+localPort = 5000
+externalPort = 80

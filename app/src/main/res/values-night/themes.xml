@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.iOS18Photos" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/ios_blue</item>
+        <item name="colorPrimaryVariant">@color/ios_tint_blue</item>
+        <item name="colorOnPrimary">@color/background_primary_dark</item>
+        
+        <item name="colorSecondary">@color/ios_blue</item>
+        <item name="colorSecondaryVariant">@color/ios_tint_blue</item>
+        <item name="colorOnSecondary">@color/background_primary_dark</item>
+        
+        <item name="android:colorBackground">@color/background_primary_dark</item>
+        <item name="colorOnBackground">@color/label_primary_dark</item>
+        
+        <item name="colorSurface">@color/background_secondary_dark</item>
+        <item name="colorOnSurface">@color/label_primary_dark</item>
+        
+        <item name="colorError">@color/red</item>
+        <item name="colorOnError">@color/background_primary_dark</item>
+        
+        <!-- Status bar and navigation bar -->
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/tab_bar_background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+    </style>
+</resources>

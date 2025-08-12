@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- iOS 18 Light Theme Colors -->
+    <color name="ios_blue">#007AFF</color>
+    <color name="ios_system_blue">#007AFF</color>
+    <color name="ios_tint_blue">#0A84FF</color>
+    
+    <!-- Background Colors -->
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F2F2F7</color>
+    <color name="background_tertiary">#FFFFFF</color>
+    <color name="background_grouped">#F2F2F7</color>
+    <color name="background_grouped_secondary">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="label_primary">#000000</color>
+    <color name="label_secondary">#3C3C43</color>
+    <color name="label_tertiary">#3C3C43</color>
+    <color name="label_quaternary">#3C3C43</color>
+    
+    <!-- Separator Colors -->
+    <color name="separator">#C6C6C8</color>
+    <color name="separator_opaque">#C6C6C8</color>
+    
+    <!-- Fill Colors -->
+    <color name="fill_primary">#787880</color>
+    <color name="fill_secondary">#787880</color>
+    <color name="fill_tertiary">#767680</color>
+    <color name="fill_quaternary">#767680</color>
+    
+    <!-- iOS 18 Dark Theme Colors -->
+    <color name="background_primary_dark">#000000</color>
+    <color name="background_secondary_dark">#1C1C1E</color>
+    <color name="background_tertiary_dark">#2C2C2E</color>
+    <color name="background_grouped_dark">#000000</color>
+    <color name="background_grouped_secondary_dark">#1C1C1E</color>
+    
+    <!-- Dark Text Colors -->
+    <color name="label_primary_dark">#FFFFFF</color>
+    <color name="label_secondary_dark">#EBEBF5</color>
+    <color name="label_tertiary_dark">#EBEBF5</color>
+    <color name="label_quaternary_dark">#EBEBF5</color>
+    
+    <!-- Dark Separator Colors -->
+    <color name="separator_dark">#38383A</color>
+    <color name="separator_opaque_dark">#38383A</color>
+    
+    <!-- Dark Fill Colors -->
+    <color name="fill_primary_dark">#787880</color>
+    <color name="fill_secondary_dark">#787880</color>
+    <color name="fill_tertiary_dark">#767680</color>
+    <color name="fill_quaternary_dark">#767680</color>
+    
+    <!-- Tab Bar Colors -->
+    <color name="tab_bar_background">#F2F2F7</color>
+    <color name="tab_bar_background_dark">#1C1C1E</color>
+    <color name="tab_bar_selected">#007AFF</color>
+    <color name="tab_bar_unselected">#8E8E93</color>
+    <color name="tab_bar_unselected_dark">#8E8E93</color>
+    
+    <!-- Navigation Bar Colors -->
+    <color name="nav_bar_background">#F2F2F7</color>
+    <color name="nav_bar_background_dark">#1C1C1E</color>
+    <color name="nav_bar_title">#000000</color>
+    <color name="nav_bar_title_dark">#FFFFFF</color>
+    
+    <!-- Special Colors -->
+    <color name="red">#FF3B30</color>
+    <color name="green">#34C759</color>
+    <color name="yellow">#FFCC00</color>
+    <color name="orange">#FF9500</color>
+    <color name="purple">#AF52DE</color>
+    <color name="pink">#FF2D92</color>
+    <color name="teal">#5AC8FA</color>
+    <color name="indigo">#5856D6</color>
+    
+    <!-- Overlay Colors -->
+    <color name="overlay_light">#80FFFFFF</color>
+    <color name="overlay_dark">#80000000</color>
+    <color name="blur_overlay">#99FFFFFF</color>
+    <color name="blur_overlay_dark">#99000000</color>
+    
+    <!-- Selection Colors -->
+    <color name="selection_overlay">#4D007AFF</color>
+    <color name="grid_overlay">#1A000000</color>
+    
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+</resources>
