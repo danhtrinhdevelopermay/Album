@@ -1448,6 +1448,7 @@ color background_secondary
 color background_secondary_dark
 color background_tertiary
 color background_tertiary_dark
+color black
 color blur_overlay
 color blur_overlay_dark
 color bottom_nav_color
@@ -2216,6 +2217,7 @@ color teal
 color tooltip_background_dark
 color tooltip_background_light
 color transparent
+color white
 color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -3222,7 +3224,10 @@ drawable exo_styled_controls_speed
 drawable exo_styled_controls_subtitle_off
 drawable exo_styled_controls_subtitle_on
 drawable exo_styled_controls_vr
+drawable gradient_overlay_bottom
+drawable gradient_overlay_top
 drawable ic_albums_tab
+drawable ic_arrow_back
 drawable ic_arrow_back_black_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -3245,10 +3250,12 @@ drawable ic_launcher_foreground
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
+drawable ic_more_vert
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_photo_library
 drawable ic_photos_tab
 drawable ic_play_arrow
 drawable ic_search_black_24
@@ -3405,6 +3412,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id albumTitle
 id album_count
 id album_name
 id album_name_edit_text
@@ -3427,6 +3435,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backButton
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3434,6 +3443,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomToolbar
 id bottom_navigation
 id bounce
 id bounceBoth
@@ -3485,6 +3495,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id default_albums_recycler_view
+id deleteButton
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3514,10 +3525,12 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editButton
 id edit_query
 id edit_text_id
 id elastic
 id embed
+id emptyStateLayout
 id empty_search_state
 id empty_state
 id end
@@ -3579,6 +3592,7 @@ id expand_activities_button
 id expanded_menu
 id fab_create_album
 id fade
+id favoriteButton
 id favorite_indicator
 id favorites_recycler_view
 id fill
@@ -3683,6 +3697,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id moreButton
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3767,13 +3782,17 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id photoCount
+id photoImageView
 id photo_image
+id photosRecyclerView
 id photos_recycler_view
 id pin
 id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3816,6 +3835,7 @@ id select_dialog_listview
 id selected
 id selection_overlay
 id selection_type
+id shareButton
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3900,6 +3920,7 @@ id toggle
 id top
 id topAppBar
 id topPanel
+id topToolbar
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -4054,7 +4075,9 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_album_detail
 layout activity_main
+layout activity_photo_detail
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4304,6 +4327,7 @@ string exo_track_unknown
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string favorite
 string favorites
 string file_name
 string file_size
@@ -4425,6 +4449,7 @@ string nav_for_you
 string nav_photos
 string nav_search
 string new_album
+string no_photos_in_album
 string no_results
 string password_toggle_content_description
 string path_password_eye

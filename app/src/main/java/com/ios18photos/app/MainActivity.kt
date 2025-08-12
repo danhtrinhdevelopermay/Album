@@ -2,6 +2,7 @@ package com.ios18photos.app
 
 import android.Manifest
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
@@ -68,8 +69,10 @@ class MainActivity : AppCompatActivity() {
         
         // Adjust for light/dark theme
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val isLightTheme = !resources.configuration.isNightModeActive
+            val nightModeFlags = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            val isLightTheme = nightModeFlags != Configuration.UI_MODE_NIGHT_YES
             if (isLightTheme) {
+                @Suppress("DEPRECATION")
                 window.decorView.systemUiVisibility = 
                     android.view.View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
             }

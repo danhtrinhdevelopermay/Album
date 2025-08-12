@@ -1,11 +1,14 @@
 package com.ios18photos.app.data.model
 
 import android.net.Uri
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import java.util.Date
 
 /**
  * Represents a media item (photo or video) in the gallery
  */
+@Parcelize
 data class MediaItem(
     val id: Long,
     val uri: Uri,
@@ -21,7 +24,7 @@ data class MediaItem(
     val bucketId: String,
     var isFavorite: Boolean = false,
     var isSelected: Boolean = false
-) {
+) : Parcelable {
     /**
      * Check if this media item is a video
      */
@@ -73,6 +76,7 @@ data class MediaItem(
 /**
  * Represents an album containing media items
  */
+@Parcelize
 data class Album(
     val id: String,
     val name: String,
@@ -80,7 +84,7 @@ data class Album(
     val itemCount: Int,
     val isDefault: Boolean = false, // For system albums like Camera Roll, Favorites
     val type: AlbumType = AlbumType.USER_CREATED
-)
+) : Parcelable
 
 /**
  * Types of albums in the system

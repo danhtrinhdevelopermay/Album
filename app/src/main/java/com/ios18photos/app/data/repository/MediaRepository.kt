@@ -295,4 +295,9 @@ class MediaRepository(private val context: Context) {
             else -> allItems.filter { it.bucketId == albumId }
         }
     }
+    
+    /**
+     * Get photos for a specific album (alias for getMediaItemsForAlbum)
+     */
+    suspend fun getPhotosForAlbum(albumId: String): List<MediaItem> = getMediaItemsForAlbum(albumId)
 }

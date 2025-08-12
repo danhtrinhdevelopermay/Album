@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:44:9-52:20
+INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:45:9-53:20
 	android:grantUriPermissions
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:48:13-47
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:49:13-47
 	android:authorities
 		INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:46:13-60
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:47:13-60
 	android:exported
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:47:13-37
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:45:13-62
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:46:13-62
 manifest
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-55:12
-INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-55:12
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-56:12
+INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:2:1-56:12
 MERGED from [androidx.databinding:viewbinding:8.1.2] /home/runner/.gradle/caches/transforms-3/c16b6afc5b135d80fdb16429f704cbb5/transformed/viewbinding-8.1.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.karumi:dexter:6.2.3] /home/runner/.gradle/caches/transforms-3/c88864a20af4480a2ac9d4e96d5a81a0/transformed/dexter-6.2.3/AndroidManifest.xml:17:1-32:12
 MERGED from [androidx.navigation:navigation-common:2.7.5] /home/runner/.gradle/caches/transforms-3/67d035b76ff73f3d924b38742837ce91/transformed/navigation-common-2.7.5/AndroidManifest.xml:17:1-22:12
@@ -131,9 +131,13 @@ uses-permission#android.permission.RECORD_AUDIO
 ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:11:5-71
 	android:name
 		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:11:22-68
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:12:5-77
+	android:name
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:12:22-74
 application
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:13:5-54:19
-INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:13:5-54:19
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:14:5-55:19
+INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml:14:5-55:19
 MERGED from [com.karumi:dexter:6.2.3] /home/runner/.gradle/caches/transforms-3/c88864a20af4480a2ac9d4e96d5a81a0/transformed/dexter-6.2.3/AndroidManifest.xml:26:5-30:19
 MERGED from [com.karumi:dexter:6.2.3] /home/runner/.gradle/caches/transforms-3/c88864a20af4480a2ac9d4e96d5a81a0/transformed/dexter-6.2.3/AndroidManifest.xml:26:5-30:19
 MERGED from [com.google.android.material:material:1.10.0] /home/runner/.gradle/caches/transforms-3/1c3bcf0a06d414dc8e397a2da4beaf70/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
@@ -159,63 +163,63 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/runne
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/runner/.gradle/caches/transforms-3/cdabb42d0eb29c24a23cb1606a6c16f6/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:20:9-35
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:21:9-35
 	android:label
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:19:9-41
 	android:fullBackupContent
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:16:9-54
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:17:9-54
 	android:roundIcon
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:19:9-54
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:20:9-54
 	tools:targetApi
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:22:9-29
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:23:9-29
 	android:icon
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:17:9-43
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:15:9-35
 	android:theme
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:21:9-49
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:22:9-49
 	android:dataExtractionRules
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:15:9-65
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:16:9-65
 activity#com.ios18photos.app.MainActivity
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:24:9-32:20
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:25:9-33:20
 	android:exported
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:26:13-36
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:27:13-36
 	android:theme
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:27:13-65
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:28:13-65
 	android:name
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:25:13-41
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:26:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:28:13-31:29
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:29:13-32:29
 action#android.intent.action.MAIN
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:29:17-69
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:29:25-66
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:30:17-77
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:30:27-74
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:31:27-74
 activity#com.ios18photos.app.ui.photodetail.PhotoDetailActivity
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:34:9-37:40
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:35:9-38:40
 	android:exported
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:37:13-37
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:38:13-37
 	android:theme
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:36:13-64
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:37:13-64
 	android:name
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:35:13-63
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:36:13-63
 activity#com.ios18photos.app.ui.album.AlbumDetailActivity
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:39:9-42:40
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:40:9-43:40
 	android:exported
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:42:13-37
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:43:13-37
 	android:theme
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:41:13-65
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:42:13-65
 	android:name
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:40:13-57
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:41:13-57
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:49:13-51:57
+ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:50:13-52:57
 	android:resource
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:51:17-55
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:52:17-55
 	android:name
-		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:50:17-67
+		ADDED from /home/runner/workspace/app/src/main/AndroidManifest.xml:51:17-67
 uses-sdk
 INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/runner/workspace/app/src/main/AndroidManifest.xml

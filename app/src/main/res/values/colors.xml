@@ -88,4 +88,8 @@
     <color name="transparent">#00000000</color>
     <color name="semi_transparent_black">#80000000</color>
     <color name="semi_transparent_white">#80FFFFFF</color>
+    
+    <!-- Basic colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>

@@ -1,0 +1,113 @@
+﻿2025-08-12T01:07:03.3182152Z ##[group]Run ./gradlew lintDebug
+2025-08-12T01:07:03.3182575Z [36;1m./gradlew lintDebug[0m
+2025-08-12T01:07:03.3225273Z shell: /usr/bin/bash -e {0}
+2025-08-12T01:07:03.3225582Z env:
+2025-08-12T01:07:03.3225916Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-12T01:07:03.3226475Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-12T01:07:03.3226924Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2025-08-12T01:07:03.3227262Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2025-08-12T01:07:03.3227573Z ##[endgroup]
+2025-08-12T01:07:03.4084930Z Downloading https://services.gradle.org/distributions/gradle-8.0-bin.zip
+2025-08-12T01:07:04.7548272Z ...........10%............20%............30%............40%............50%............60%...........70%............80%............90%............100%
+2025-08-12T01:07:05.7991247Z 
+2025-08-12T01:07:05.7993896Z Welcome to Gradle 8.0!
+2025-08-12T01:07:05.7994578Z 
+2025-08-12T01:07:05.8000884Z For more details see https://docs.gradle.org/8.0/release-notes.html
+2025-08-12T01:07:05.8001585Z 
+2025-08-12T01:07:05.9993260Z Starting a Gradle Daemon (subsequent builds will be faster)
+2025-08-12T01:07:41.8989287Z This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+2025-08-12T01:07:43.8002149Z Checking the license for package Android SDK Build-Tools 33.0.1 in /usr/local/lib/android/sdk/licenses
+2025-08-12T01:07:43.8009366Z License for package Android SDK Build-Tools 33.0.1 accepted.
+2025-08-12T01:07:43.8011574Z Preparing "Install Android SDK Build-Tools 33.0.1 v.33.0.1".
+2025-08-12T01:07:44.8986447Z "Install Android SDK Build-Tools 33.0.1 v.33.0.1" ready.
+2025-08-12T01:07:44.8989798Z Installing Android SDK Build-Tools 33.0.1 in /usr/local/lib/android/sdk/build-tools/33.0.1
+2025-08-12T01:07:44.8996320Z "Install Android SDK Build-Tools 33.0.1 v.33.0.1" complete.
+2025-08-12T01:07:44.9985003Z "Install Android SDK Build-Tools 33.0.1 v.33.0.1" finished.
+2025-08-12T01:07:45.3049242Z > Task :app:preBuild UP-TO-DATE
+2025-08-12T01:07:45.3049880Z > Task :app:preDebugBuild UP-TO-DATE
+2025-08-12T01:08:03.1012569Z > Task :app:dataBindingMergeDependencyArtifactsDebug
+2025-08-12T01:08:03.1013768Z > Task :app:generateDebugResValues
+2025-08-12T01:08:03.1014698Z > Task :app:generateDebugResources
+2025-08-12T01:08:06.2984830Z > Task :app:packageDebugResources
+2025-08-12T01:08:06.5986252Z > Task :app:mergeDebugResources
+2025-08-12T01:08:08.0983995Z > Task :app:parseDebugLocalResources
+2025-08-12T01:08:08.1984679Z > Task :app:checkDebugAarMetadata
+2025-08-12T01:08:08.4988859Z > Task :app:dataBindingGenBaseClassesDebug
+2025-08-12T01:08:08.4996257Z > Task :app:mapDebugSourceSetPaths
+2025-08-12T01:08:08.5003833Z > Task :app:createDebugCompatibleScreenManifests
+2025-08-12T01:08:08.5007002Z > Task :app:extractDeepLinksDebug
+2025-08-12T01:08:08.8003158Z > Task :app:processDebugMainManifest
+2025-08-12T01:08:08.8985617Z > Task :app:processDebugManifest
+2025-08-12T01:08:09.1984358Z > Task :app:javaPreCompileDebug
+2025-08-12T01:08:09.1986070Z > Task :app:extractProguardFiles
+2025-08-12T01:08:09.1992915Z > Task :app:preDebugAndroidTestBuild SKIPPED
+2025-08-12T01:08:09.1994487Z > Task :app:generateDebugAndroidTestResValues
+2025-08-12T01:08:09.1995117Z > Task :app:processDebugManifestForPackage
+2025-08-12T01:08:11.7995852Z > Task :app:processDebugResources
+2025-08-12T01:08:27.4995540Z 
+2025-08-12T01:08:27.5024845Z > Task :app:compileDebugKotlin
+2025-08-12T01:08:27.5026710Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/MainActivity.kt:73:34 'setter for systemUiVisibility: Int' is deprecated. Deprecated in Java
+2025-08-12T01:08:27.5029589Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/MainActivity.kt:74:39 'SYSTEM_UI_FLAG_LIGHT_STATUS_BAR: Int' is deprecated. Deprecated in Java
+2025-08-12T01:08:27.5033304Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/data/repository/MediaRepository.kt:222:50 'toLowerCase(Locale): String' is deprecated. Use lowercase() instead.
+2025-08-12T01:08:27.5038014Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/albums/AlbumsFragment.kt:52:42 Parameter 'album' is never used, could be renamed to _
+2025-08-12T01:08:27.5042293Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/albums/AlbumsFragment.kt:57:47 Parameter 'album' is never used, could be renamed to _
+2025-08-12T01:08:27.5045421Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/albums/AlbumsViewModel.kt:59:21 Parameter 'name' is never used
+2025-08-12T01:08:27.5050650Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/foryou/ForYouFragment.kt:48:48 Parameter 'mediaItem' is never used, could be renamed to _
+2025-08-12T01:08:27.5055114Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/foryou/ForYouFragment.kt:53:45 Parameter 'mediaItem' is never used, could be renamed to _
+2025-08-12T01:08:27.5057880Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/photos/PhotosFragment.kt:59:43 Parameter 'mediaItem' is never used, could be renamed to _
+2025-08-12T01:08:27.5060397Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/photos/PhotosViewModel.kt:79:59 This operation has led to an overflow
+2025-08-12T01:08:27.5063209Z w: file:///home/runner/work/Album/Album/app/src/main/java/com/ios18photos/app/ui/search/SearchFragment.kt:69:51 Parameter 'mediaItem' is never used, could be renamed to _
+2025-08-12T01:08:32.4989440Z 
+2025-08-12T01:08:32.4996952Z > Task :app:compileDebugJavaWithJavac
+2025-08-12T01:08:32.5989237Z > Task :app:bundleDebugClassesToCompileJar
+2025-08-12T01:08:56.6983711Z > Task :app:lintAnalyzeDebug
+2025-08-12T01:08:57.0982894Z 
+2025-08-12T01:08:57.1002318Z > Task :app:lintReportDebug
+2025-08-12T01:08:57.1004304Z Wrote HTML report to file:///home/runner/work/Album/Album/app/build/reports/lint-results-debug.html
+2025-08-12T01:08:57.1004962Z 
+2025-08-12T01:08:57.1005171Z > Task :app:lintDebug FAILED
+2025-08-12T01:08:57.1005717Z Lint found 9 errors, 128 warnings. First failure:
+2025-08-12T01:08:57.1006058Z 
+2025-08-12T01:08:57.1049676Z ##[error]/home/runner/work/Album/Album/app/src/main/AndroidManifest.xml:35: Error: Class referenced in the manifest, com.ios18photos.app.ui.photodetail.PhotoDetailActivity, was not found in the project or the libraries [MissingClass]
+2025-08-12T01:08:57.1064163Z             android:name=".ui.photodetail.PhotoDetailActivity"
+2025-08-12T01:08:57.1064865Z                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-08-12T01:08:57.1065167Z 
+2025-08-12T01:08:57.1065419Z The full lint text report is located at:
+2025-08-12T01:08:57.1066565Z   /home/runner/work/Album/Album/app/build/intermediates/lint_intermediate_text_report/debug/lint-results-debug.txt
+2025-08-12T01:08:57.1067888Z 
+2025-08-12T01:08:57.1068199Z FAILURE: Build failed with an exception.
+2025-08-12T01:08:57.1068513Z 
+2025-08-12T01:08:57.1068688Z * What went wrong:
+2025-08-12T01:08:57.1069142Z Execution failed for task ':app:lintDebug'.
+2025-08-12T01:08:57.1069764Z > Lint found errors in the project; aborting build.
+2025-08-12T01:08:57.1070208Z   
+2025-08-12T01:08:57.1070839Z   Fix the issues identified by lint, or create a baseline to see only new errors.
+2025-08-12T01:08:57.1072449Z   To create a baseline, run `gradlew updateLintBaseline` after adding the following to the module's build.gradle file:
+2025-08-12T01:08:57.1073265Z   ```
+2025-08-12T01:08:57.1073538Z   android {
+2025-08-12T01:08:57.1073799Z       lint {
+2025-08-12T01:08:57.1074221Z           baseline = file("lint-baseline.xml")
+2025-08-12T01:08:57.1074638Z       }
+2025-08-12T01:08:57.1074895Z   }
+2025-08-12T01:08:57.1075146Z   ```
+2025-08-12T01:08:57.1075806Z   For more details, see https://developer.android.com/studio/write/lint#snapshot
+2025-08-12T01:08:57.1076723Z   
+2025-08-12T01:08:57.1077477Z   Lint found 9 errors, 128 warnings. First failure:
+2025-08-12T01:08:57.1078047Z   
+2025-08-12T01:08:57.1081398Z ##[error]  /home/runner/work/Album/Album/app/src/main/AndroidManifest.xml:35: Error: Class referenced in the manifest, com.ios18photos.app.ui.photodetail.PhotoDetailActivity, was not found in the project or the libraries [MissingClass]
+2025-08-12T01:08:57.1084508Z               android:name=".ui.photodetail.PhotoDetailActivity"
+2025-08-12T01:08:57.1085226Z                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2025-08-12T01:08:57.1153737Z   
+2025-08-12T01:08:57.1154371Z   The full lint text report is located at:
+2025-08-12T01:08:57.1155592Z     /home/runner/work/Album/Album/app/build/intermediates/lint_intermediate_text_report/debug/lint-results-debug.txt
+2025-08-12T01:08:57.1156397Z 
+2025-08-12T01:08:57.1156547Z * Try:
+2025-08-12T01:08:57.1157032Z > Run with --stacktrace option to get the stack trace.
+2025-08-12T01:08:57.1157720Z > Run with --info or --debug option to get more log output.
+2025-08-12T01:08:57.1158319Z > Run with --scan to get full insights.
+2025-08-12T01:08:57.1158605Z 
+2025-08-12T01:08:57.1158869Z * Get more help at https://help.gradle.org
+2025-08-12T01:08:57.1159187Z 
+2025-08-12T01:08:57.1159363Z BUILD FAILED in 1m 53s
+2025-08-12T01:08:57.1159772Z 23 actionable tasks: 23 executed
+2025-08-12T01:08:57.5496837Z ##[error]Process completed with exit code 1.

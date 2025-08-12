@@ -10,6 +10,7 @@
     <color name="background_secondary_dark">#1C1C1E</color>
     <color name="background_tertiary">#FFFFFF</color>
     <color name="background_tertiary_dark">#2C2C2E</color>
+    <color name="black">#FF000000</color>
     <color name="blur_overlay">#99FFFFFF</color>
     <color name="blur_overlay_dark">#99000000</color>
     <color name="fill_primary">#787880</color>
@@ -58,6 +59,7 @@
     <color name="tab_bar_unselected_dark">#8E8E93</color>
     <color name="teal">#5AC8FA</color>
     <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFCC00</color>
     <plurals name="item_count">
         <item quantity="zero">No items</item>
@@ -100,6 +102,7 @@
     <string name="dimensions">Dimensions</string>
     <string name="edit">Edit</string>
     <string name="empty_album">No photos in this album</string>
+    <string name="favorite">Favorite</string>
     <string name="favorites">Favorites</string>
     <string name="file_name">File Name</string>
     <string name="file_size">File Size</string>
@@ -116,6 +119,7 @@
     <string name="nav_photos">Photos</string>
     <string name="nav_search">Search</string>
     <string name="new_album">New Album</string>
+    <string name="no_photos_in_album">No photos in this album</string>
     <string name="no_results">No results found</string>
     <string name="permission_required">Storage permission is required to access photos</string>
     <string name="photo_deleted">Photo deleted</string>
