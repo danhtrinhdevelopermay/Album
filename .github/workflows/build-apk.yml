@@ -121,14 +121,14 @@ jobs:
         run: ./gradlew assembleRelease
 
       - name: Create Keystore
-        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY != ''
+        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY
         run: |
           mkdir -p keystore
           echo "${{ secrets.SIGNING_KEY }}" | base64 --decode > keystore/release.keystore
           echo "Keystore created with size: $(stat -c%s keystore/release.keystore) bytes"
           
       - name: Sign Release APK
-        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY != ''
+        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY
         run: |
           echo "Verifying keystore..."
           keytool -list -keystore keystore/release.keystore -storepass "${{ secrets.KEY_STORE_PASSWORD }}" -v
@@ -166,14 +166,14 @@ jobs:
 
       - name: Upload Release APK (Unsigned)
         uses: actions/upload-artifact@v4
-        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY == ''
+        if: github.ref == 'refs/heads/main' && !secrets.SIGNING_KEY
         with:
           name: release-apk-unsigned
           path: app/build/outputs/apk/release/app-release-unsigned.apk
           
       - name: Upload Release APK (Signed)
         uses: actions/upload-artifact@v4
-        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY != ''
+        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY
         with:
           name: release-apk-signed
           path: app/build/outputs/apk/release/app-release-signed.apk
