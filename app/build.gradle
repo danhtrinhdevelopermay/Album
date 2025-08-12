@@ -63,8 +63,8 @@ dependencies {
     // Video Player
     implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
     
-    // Blur Effect
-    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+    // Blur Effect - temporarily disabled due to dependency issue
+    // implementation 'com.github.mmin18:realtimeblurview:1.2.1'
     
     // Permissions
     implementation 'com.karumi:dexter:6.2.3'
