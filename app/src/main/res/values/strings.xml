@@ -91,4 +91,35 @@
     <!-- Additional strings for new activities -->
     <string name="favorite">Favorite</string>
     <string name="no_photos_in_album">No photos in this album</string>
+    
+    <!-- New iOS 18 strings -->
+    <string name="albums">Albums</string>
+    <string name="select">Select</string>
+    <string name="search">Search</string>
+    <string name="sort">Sort</string>
+    <string name="all">All</string>
+    <string name="recents">Recents</string>
+    <string name="see_all">See All</string>
+    <string name="recent_days">Recent Days</string>
+    <string name="people_pets">People &amp; Pets</string>
+    <string name="items_count">%1$d Items</string>
+    
+    <!-- Plurals -->
+    <plurals name="photos_count">
+        <item quantity="zero">No photos</item>
+        <item quantity="one">1 photo</item>
+        <item quantity="other">%d photos</item>
+    </plurals>
+    
+    <plurals name="videos_count">
+        <item quantity="zero">No videos</item>
+        <item quantity="one">1 video</item>
+        <item quantity="other">%d videos</item>
+    </plurals>
+    
+    <plurals name="items_count_plural">
+        <item quantity="zero">No items</item>
+        <item quantity="one">1 item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
 </resources>

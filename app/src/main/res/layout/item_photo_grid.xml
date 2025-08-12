@@ -1,66 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="2dp"
-    app:cardBackgroundColor="@color/background_secondary"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="0dp">
+    android:layout_height="120dp"
+    android:layout_margin="1dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ImageView
+        android:id="@+id/photo_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/photo_thumbnail"
+        android:background="@color/background_tertiary" />
 
-        <ImageView
-            android:id="@+id/photo_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/backgrounds/scenic" />
+    <!-- Video duration overlay (only shown for videos) -->
+    <TextView
+        android:id="@+id/video_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="6dp"
+        android:background="@drawable/overlay_background"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="3dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
-        <!-- Video indicator -->
-        <ImageView
-            android:id="@+id/video_indicator"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/ic_play_arrow"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible" />
+    <!-- Selection circle (shown when in selection mode) -->
+    <FrameLayout
+        android:id="@+id/selection_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/selection_overlay"
+        android:visibility="gone">
 
-        <!-- Selection overlay -->
         <View
-            android:id="@+id/selection_overlay"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@color/selection_overlay"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@id/photo_image"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="visible" />
+            android:id="@+id/selection_circle"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/ios_selection_circle" />
 
-        <!-- Favorite indicator -->
         <ImageView
-            android:id="@+id/favorite_indicator"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_margin="6dp"
-            android:src="@drawable/ic_favorite"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:visibility="visible" />
+            android:id="@+id/selection_checkmark"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="14dp"
+            android:src="@drawable/ic_check"
+            android:tint="@color/white"
+            android:visibility="gone" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
-</com.google.android.material.card.MaterialCardView>
+</FrameLayout>

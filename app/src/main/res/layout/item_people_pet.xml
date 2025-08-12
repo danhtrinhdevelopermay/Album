@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:layout_height="100dp"
+    android:layout_marginEnd="12dp"
+    app:cardBackgroundColor="@color/background_secondary"
+    app:cardCornerRadius="40dp"
+    app:cardElevation="0dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/people_pet_image"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="@color/background_tertiary" />
+
+        <TextView
+            android:id="@+id/people_pet_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Person"
+            android:textAppearance="@style/TextAppearance.iOS18Photos.Caption2"
+            android:textColor="@color/label_primary"
+            android:textAlignment="center"
+            android:padding="4dp" />
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>
