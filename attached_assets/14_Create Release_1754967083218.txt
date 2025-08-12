@@ -1,0 +1,27 @@
+﻿2025-08-12T01:55:11.8989570Z ##[group]Run softprops/action-gh-release@v2
+2025-08-12T01:55:11.8989897Z with:
+2025-08-12T01:55:11.8990091Z   tag_name: v7
+2025-08-12T01:55:11.8990294Z   name: Release v7
+2025-08-12T01:55:11.8990832Z   body: Automated release from CI/CD pipeline
+
+Changes in this Release
+- Automated build from commit 0b004552192305c54200d8d79d146519d5423bf8
+
+2025-08-12T01:55:11.8991391Z   draft: false
+2025-08-12T01:55:11.8991600Z   prerelease: false
+2025-08-12T01:55:11.8992014Z   files: app/build/outputs/apk/debug/app-debug.apk
+app/build/outputs/apk/release/app-release-*.apk
+2025-08-12T01:55:11.8992613Z   token: ***
+2025-08-12T01:55:11.8992815Z env:
+2025-08-12T01:55:11.8993112Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-12T01:55:11.8993604Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-12T01:55:11.8994010Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2025-08-12T01:55:11.8994310Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2025-08-12T01:55:11.8994719Z   GITHUB_TOKEN: ***
+2025-08-12T01:55:11.8994935Z ##[endgroup]
+2025-08-12T01:55:12.1898996Z 👩‍🏭 Creating new GitHub release for tag v7...
+2025-08-12T01:55:12.3240749Z ⚠️ GitHub release failed with status: 403
+2025-08-12T01:55:12.3242524Z {"message":"Resource not accessible by integration","documentation_url":"https://docs.github.com/rest/releases/releases#create-a-release","status":"403"}
+2025-08-12T01:55:12.3244315Z Skip retry — your GitHub token/PAT does not have the required permission to create a release
+2025-08-12T01:55:12.3246424Z ⚠️ Unexpected error fetching GitHub release for tag refs/heads/main: HttpError: Resource not accessible by integration - https://docs.github.com/rest/releases/releases#create-a-release
+2025-08-12T01:55:12.3272539Z ##[error]Resource not accessible by integration - https://docs.github.com/rest/releases/releases#create-a-release
