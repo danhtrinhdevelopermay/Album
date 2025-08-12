@@ -1,106 +1,128 @@
-# Android Keystore Guide
+# Keystore Management
 
-This directory contains instructions for creating and managing Android keystores for app signing.
+This directory contains keystores for signing Android APKs and tools for managing them.
 
-## Creating a Keystore
+## Files
 
-### For Development (Debug)
-Android Studio automatically creates a debug keystore located at:
-- **Windows**: `C:\Users\[username]\.android\debug.keystore`
-- **Mac/Linux**: `~/.android/debug.keystore`
+- `debug.keystore` - Debug keystore for development builds
+- `generate_release_keystore.sh` - Script to generate production keystore
+- `release.keystore` - **NOT INCLUDED** - Production keystore for release builds
 
-### For Release
-To create a release keystore, use the following command:
+## Debug Keystore
+
+The debug keystore is included for development convenience with default Android debug credentials:
+
+- **Keystore Password**: android
+- **Key Alias**: androiddebugkey
+- **Key Password**: android
+- **Validity**: 30 years from creation
+
+## Release Keystore Generation
+
+### Automated Generation
+
+Use the provided script to generate a properly formatted release keystore:
 
 ```bash
-keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-key-alias
+cd keystore
+./generate_release_keystore.sh
 ```
 
-You'll be prompted to enter:
-- Keystore password
-- Key password
-- Personal information (name, organization, etc.)
+This script will:
+- Generate a PKCS12 format keystore (compatible with modern Android tools)
+- Create RSA 2048-bit keys with SHA256 signature algorithm
+- Set 70-year validity period
+- Output all required information for GitHub Actions setup
+- Provide base64 encoded keystore for CI/CD
 
-## Keystore Information
+### Manual Generation
 
-### Sample Debug Keystore (FOR DEVELOPMENT ONLY)
-- **File**: `debug.keystore`
-- **Password**: `android`
-- **Key Alias**: `androiddebugkey`
-- **Key Password**: `android`
-- **Validity**: 30 years
+If you prefer manual generation:
 
-**⚠️ NEVER USE DEBUG KEYSTORE FOR PRODUCTION APPS**
+```bash
+keytool -genkeypair \
+    -storetype PKCS12 \
+    -keystore release.keystore \
+    -alias ios18photos \
+    -keyalg RSA \
+    -keysize 2048 \
+    -validity 25550 \
+    -sigalg SHA256withRSA \
+    -dname "CN=iOS18Photos App, OU=Mobile Development, O=iOS18Photos, L=San Francisco, ST=California, C=US"
+```
 
-## GitHub Actions Secrets
+### Security Guidelines
 
-To use the keystore in GitHub Actions CI/CD, you need to add these secrets to your repository:
+1. **Never commit the release keystore to version control**
+2. Store the keystore in a secure location
+3. Use strong passwords
+4. Keep backup copies
+5. Document the keystore details securely
+
+## GitHub Actions Setup
+
+### Required Secrets
+
+Add these secrets to your GitHub repository settings:
 
 1. **SIGNING_KEY**: Base64 encoded keystore file
    ```bash
-   base64 -i your-keystore.jks | pbcopy  # macOS
-   base64 -i your-keystore.jks           # Linux
+   base64 -i release.keystore | pbcopy  # macOS
+   base64 -i release.keystore           # Linux
    ```
 
-2. **ALIAS**: Your key alias name
+2. **ALIAS**: Key alias name (default: `ios18photos`)
 
 3. **KEY_STORE_PASSWORD**: Keystore password
 
 4. **KEY_PASSWORD**: Key password
 
-## Security Best Practices
+### Setting Up Secrets
 
-1. **Never commit keystores to version control**
-2. **Use different keystores for debug and release**
-3. **Store release keystores securely**
-4. **Backup your release keystore and passwords**
-5. **Use strong passwords**
-6. **Limit access to release keystores**
-
-## Signing Configuration
-
-Add this to your `app/build.gradle`:
-
-```gradle
-android {
-    signingConfigs {
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
-        release {
-            storeFile file('release.keystore')  // Update path
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
-        }
-    }
-    
-    buildTypes {
-        debug {
-            signingConfig signingConfigs.debug
-        }
-        release {
-            signingConfig signingConfigs.release
-        }
-    }
-}
-```
+1. Go to your GitHub repository
+2. Navigate to Settings → Secrets and variables → Actions
+3. Click "New repository secret" for each secret
+4. Use the exact names above (case-sensitive)
+5. Paste the corresponding values
 
 ## Troubleshooting
 
-### Common Issues:
-1. **"Keystore was tampered with"**: Wrong password
-2. **"Certificate expired"**: Create new keystore
-3. **"Key alias not found"**: Check alias name
+### Fixed Issues
 
-### Verification Commands:
+✅ **"Tag number over 30 is not supported"**
+- **Cause**: Old keystore format or corrupted keystore
+- **Solution**: Use the provided generation script which creates PKCS12 format
+- **Status**: Resolved in updated CI/CD pipeline
+
+✅ **Third-party signing action failures**
+- **Cause**: Outdated r0adkll/sign-android-release@v1 action
+- **Solution**: Replaced with native jarsigner and apksigner tools
+- **Status**: Resolved with direct Android SDK tools
+
+### Common Issues
+
+1. **"keystore was tampered with"**
+   - Check that base64 encoding/decoding was done correctly
+   - Verify the keystore password is correct
+   - Ensure no line breaks in base64 string
+
+2. **"Alias not found"**
+   - Verify the alias name matches exactly
+   - List keystore contents: `keytool -list -v -keystore release.keystore`
+
+3. **APK not signed properly**
+   - Check that all four secrets are set correctly
+   - Verify keystore format is PKCS12
+   - Ensure passwords match keystore configuration
+
+## Verification
+
+After setting up the keystore, verify it works:
+
 ```bash
-# List keystore contents
-keytool -list -v -keystore your-keystore.jks
+# Check keystore contents
+keytool -list -v -keystore release.keystore
 
-# Verify APK signing
-apksigner verify --verbose your-app.apk
+# Test signing (dry run)
+jarsigner -verify -verbose -certs your-app.apk
 ```

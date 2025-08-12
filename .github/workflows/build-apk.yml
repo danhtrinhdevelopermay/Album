@@ -120,18 +120,43 @@ jobs:
       - name: Build release APK
         run: ./gradlew assembleRelease
 
-      - name: Sign APK
-        uses: r0adkll/sign-android-release@v1
-        if: github.ref == 'refs/heads/main'
-        id: sign_app
-        with:
-          releaseDirectory: app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-          alias: ${{ secrets.ALIAS }}
-          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
-        env:
-          BUILD_TOOLS_VERSION: "34.0.0"
+      - name: Create Keystore
+        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY != ''
+        run: |
+          mkdir -p keystore
+          echo "${{ secrets.SIGNING_KEY }}" | base64 --decode > keystore/release.keystore
+          echo "Keystore created with size: $(stat -c%s keystore/release.keystore) bytes"
+          
+      - name: Sign Release APK
+        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY != ''
+        run: |
+          echo "Verifying keystore..."
+          keytool -list -keystore keystore/release.keystore -storepass "${{ secrets.KEY_STORE_PASSWORD }}" -v
+          
+          echo "Signing APK with jarsigner..."
+          jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 \
+            -keystore keystore/release.keystore \
+            -storepass "${{ secrets.KEY_STORE_PASSWORD }}" \
+            -keypass "${{ secrets.KEY_PASSWORD }}" \
+            app/build/outputs/apk/release/app-release-unsigned.apk \
+            "${{ secrets.ALIAS }}"
+          
+          echo "Aligning APK..."
+          ${ANDROID_HOME}/build-tools/34.0.0/zipalign -v 4 \
+            app/build/outputs/apk/release/app-release-unsigned.apk \
+            app/build/outputs/apk/release/app-release-signed.apk
+          
+          echo "Verifying signed APK..."
+          ${ANDROID_HOME}/build-tools/34.0.0/apksigner verify \
+            app/build/outputs/apk/release/app-release-signed.apk
+          
+          echo "✅ APK signed and verified successfully!"
+          echo "Final APK size: $(stat -c%s app/build/outputs/apk/release/app-release-signed.apk) bytes"
+          
+      - name: Cleanup Keystore
+        if: always() && github.ref == 'refs/heads/main'
+        run: |
+          rm -f keystore/release.keystore
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
@@ -139,12 +164,19 @@ jobs:
           name: debug-apk
           path: app/build/outputs/apk/debug/
 
-      - name: Upload Release APK
+      - name: Upload Release APK (Unsigned)
         uses: actions/upload-artifact@v4
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY == ''
         with:
-          name: release-apk
-          path: app/build/outputs/apk/release/
+          name: release-apk-unsigned
+          path: app/build/outputs/apk/release/app-release-unsigned.apk
+          
+      - name: Upload Release APK (Signed)
+        uses: actions/upload-artifact@v4
+        if: github.ref == 'refs/heads/main' && secrets.SIGNING_KEY != ''
+        with:
+          name: release-apk-signed
+          path: app/build/outputs/apk/release/app-release-signed.apk
 
       - name: Create Release
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
@@ -162,5 +194,5 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            app/build/outputs/apk/debug/*.apk
-            app/build/outputs/apk/release/*.apk
+            app/build/outputs/apk/debug/app-debug.apk
+            app/build/outputs/apk/release/app-release-*.apk
