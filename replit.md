@@ -11,6 +11,9 @@ A complete Android application replicating the iOS 18 Photos app experience with
 - ✅ Implemented MVVM architecture with ViewModel and LiveData
 - ✅ Added CI/CD pipeline with GitHub Actions for automated builds
 - ✅ Created comprehensive documentation and setup guides
+- ✅ Fixed GitHub Actions workflow - updated all deprecated actions to latest versions
+- ✅ Updated actions/upload-artifact from v3 to v4 to resolve deployment issues
+- ✅ Modernized CI/CD pipeline with actions/setup-java@v4, actions/cache@v4, and softprops/action-gh-release@v2
 
 ## Project Architecture
 
